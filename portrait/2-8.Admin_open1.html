@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-8.管理者_指定櫃門開啟1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="decoStart decoEnd">
+    <div class="wrap">
+      <header class="header">
+        <div class="logo"><img src="images/logo.svg" alt="" /></div>
+        <div class="member">館員姓名：林O倫</div>
+      </header>
+      <div class="content">
+        <div class="caseBlock">
+          <!-- 上方文字 start -->
+          <div class="topText open">
+            <div class="text">點擊你要開啟的櫃門數字</div>
+          </div>
+          <!-- 上方文字 end -->
+          <!-- 下方機器 start -->
+          <div class="bottomCase">
+            <div class="case1">
+              <div class="caseGroup group1">
+                <div class="case">01</div>
+                <div class="case">02</div>
+                <div class="case">03</div>
+                <div class="case">04</div>
+                <div class="case">05</div>
+                <div class="case">06</div>
+                <div class="case">07</div>
+                <div class="case">08</div>
+              </div>
+            </div>
+            <div class="case2">
+              <div class="caseGroup group2">
+                <div class="case">09</div>
+                <div class="case">10</div>
+                <div class="case">11</div>
+                <div class="case">12</div>
+                <div class="case empty">13</div>
+                <div class="case">14</div>
+                <div class="case">15</div>
+                <div class="case">16</div>
+                <div class="case">17</div>
+                <div class="case">18</div>
+                <div class="case">19</div>
+                <div class="case">20</div>
+              </div>
+            </div>
+          </div>
+          <!-- 下方機器 end -->
+        </div>
+      </div>
+      <div class="btn">
+        <a href="2-9.Admin_open2.html" class="yellowBtn">確認</a>
+      </div>
+    </div>
+    <script>
+      const cases = document.querySelectorAll(".case");
+      cases.forEach(function (myCase) {
+        myCase.addEventListener("click", function () {
+          this.classList.toggle("empty");
+        });
+      });
+    </script>
+  </body>
+</html>
