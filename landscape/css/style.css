@@ -440,9 +440,8 @@ body .popup .popupOverlay {
   text-align: center;
   font-size: 70px;
   font-weight: 900;
-  background: rgb(71, 53, 46);
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(71, 53, 46)), to(rgb(101, 45, 0)));
-  background: linear-gradient(0deg, rgb(71, 53, 46) 0%, rgb(101, 45, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#47352e), to(#652d00));
+  background: linear-gradient(0deg, #47352e 0%, #652d00 100%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -453,9 +452,8 @@ body .popup .popupOverlay {
   text-align: center;
   font-size: 50px;
   font-weight: 900;
-  background: rgb(71, 53, 46);
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(71, 53, 46)), to(rgb(101, 45, 0)));
-  background: linear-gradient(0deg, rgb(71, 53, 46) 0%, rgb(101, 45, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#47352e), to(#652d00));
+  background: linear-gradient(0deg, #47352e 0%, #652d00 100%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;

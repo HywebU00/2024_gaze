@@ -1,51 +1,6 @@
 @import "_normalize"; //reset
-/* noto-sans-tc-regular - chinese-traditional */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-regular.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* noto-sans-tc-500 - chinese-traditional */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-500.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* noto-sans-tc-600 - chinese-traditional */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-600.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* noto-sans-tc-800 - chinese-traditional */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-800.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* noto-sans-tc-900 - chinese-traditional */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/noto-sans-tc-v35-chinese-traditional-900.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-$textColor: #524843;
-$boxBg: #fffaf0;
+@import "_font"; //font
+@import "_variable"; //variable
 
 body {
   background: url(../images/bg.jpg) repeat;
@@ -218,12 +173,7 @@ body {
     text-align: center;
     font-size: 60px;
     font-weight: 900;
-    background: rgb(71, 53, 46);
-    background: linear-gradient(
-      0deg,
-      rgba(71, 53, 46, 1) 0%,
-      rgba(101, 45, 0, 1) 100%
-    );
+    background: $titleColor;
     background-clip: text;
     color: transparent;
     margin-bottom: 60px;
@@ -233,12 +183,7 @@ body {
     text-align: center;
     font-size: 50px;
     font-weight: 900;
-    background: rgb(71, 53, 46);
-    background: linear-gradient(
-      0deg,
-      rgba(71, 53, 46, 1) 0%,
-      rgba(101, 45, 0, 1) 100%
-    );
+    background: $titleColor;
     background-clip: text;
     color: transparent;
     margin-bottom: 50px;
@@ -265,8 +210,8 @@ body {
     height: 355px;
     border: 10px solid #fff;
     border-radius: 80px;
-    background: $boxBg;
-    box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+    background: $boxBgColor;
+    box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -335,9 +280,9 @@ body {
   height: 1000px;
   border: 10px solid #fff;
   border-radius: 80px;
-  box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+  box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
   overflow: hidden;
-  background: $boxBg url(../images/scan_bg.png) center center no-repeat;
+  background: $boxBgColor url(../images/scan_bg.png) center center no-repeat;
   margin: 200px auto 0 auto;
   .hand {
     position: absolute;
@@ -427,9 +372,9 @@ body {
   box-sizing: border-box;
   border: 10px solid #fff;
   border-radius: 40px;
-  box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+  box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
   overflow: hidden;
-  background: $boxBg;
+  background: $boxBgColor;
   margin: 0 auto 36px auto;
   display: flex;
   flex-direction: column;
@@ -465,9 +410,9 @@ body {
   box-sizing: border-box;
   border: 10px solid #fff;
   border-radius: 50px;
-  box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+  box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
   overflow: hidden;
-  background: $boxBg;
+  background: $boxBgColor;
   margin: 0 auto 40px auto;
   font-size: 27px;
   font-weight: 600;
@@ -482,12 +427,12 @@ body {
   }
   .terms::-webkit-scrollbar-track {
     border-radius: 10px;
-    background-color: $boxBg;
+    background-color: $boxBgColor;
   }
 
   .terms::-webkit-scrollbar {
     width: 15px;
-    background-color: $boxBg;
+    background-color: $boxBgColor;
   }
 
   .terms::-webkit-scrollbar-thumb {
@@ -654,13 +599,13 @@ body {
     align-items: center;
     background: #f09800;
     border: 10px solid #fff;
-    box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+    box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
     border-radius: 50px;
     color: #fff;
     text-decoration: none;
     font-size: 50px;
     font-weight: 600;
-    text-shadow: 0 0 9px rgba($color: #391414, $alpha: 0.15);
+    text-shadow: 0 0 9px rgba($color: $shadowColor, $alpha: 0.15);
   }
 }
 .detailBlock {
@@ -668,9 +613,9 @@ body {
   margin: 0 auto;
   border: 10px solid #fff;
   border-radius: 50px;
-  box-shadow: 0 0 40px rgba($color: #391414, $alpha: 0.15);
+  box-shadow: 0 0 40px rgba($color: $shadowColor, $alpha: 0.15);
   overflow: hidden;
-  background: $boxBg;
+  background: $boxBgColor;
   padding: 0 30px 30px 30px;
   box-sizing: border-box;
   position: relative;
@@ -682,7 +627,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: #fda300;
+    background: $theadColor;
   }
   table.detail {
     width: 100%;
@@ -697,7 +642,7 @@ body {
     }
     thead tr {
       padding: 0 40px;
-      background: #fda300;
+      background: $theadColor;
     }
     tbody {
       display: block;
@@ -706,17 +651,17 @@ body {
     }
     tbody::-webkit-scrollbar-track {
       border-radius: 10px;
-      background-color: $boxBg;
+      background-color: $boxBgColor;
     }
 
     tbody::-webkit-scrollbar {
       width: 15px;
-      background-color: $boxBg;
+      background-color: $boxBgColor;
     }
 
     tbody::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: #d6c9af;
+      background-color: $tbodyColor;
     }
     + .btn {
       max-width: 1635px;
@@ -726,7 +671,7 @@ body {
     }
     th {
       box-sizing: border-box;
-      color: #fff;
+      color: $thTextColor;
       text-align: center;
       font-size: 40px;
       font-weight: 600;
@@ -741,8 +686,8 @@ body {
     td {
       font-size: 30px;
       font-weight: 600;
-      color: #53402b;
-      border-bottom: 3px solid #e5dbc8;
+      color: $tdTextColor;
+      border-bottom: 3px solid $tdBorderColor;
       padding: 0.5em;
     }
   }
