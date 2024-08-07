@@ -267,7 +267,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-body.decoStart:before {
+body:before {
   content: "";
   width: 687px;
   height: 203px;
@@ -278,7 +278,7 @@ body.decoStart:before {
   top: 0;
   z-index: -1;
 }
-body.decoEnd:after {
+body:after {
   content: "";
   width: 772px;
   height: 190px;
@@ -309,7 +309,7 @@ body .popup {
   position: absolute;
   inset: 0;
   isolation: isolate;
-  z-index: 1;
+  z-index: 999;
 }
 body .popup .popupBlock {
   width: 900px;
@@ -413,12 +413,6 @@ body .popup .popupOverlay {
   margin: 0 auto;
   max-width: 800px;
 }
-.btn .total {
-  font-size: 40px;
-  font-weight: 800;
-  color: #524843;
-  line-height: 91px;
-}
 .btn a:only-child {
   margin: 0 auto;
 }
@@ -442,6 +436,17 @@ body .popup .popupOverlay {
   color: #53402b;
   background: url(../images/btnbg03.png) 0 0 no-repeat;
 }
+.btn a.startBtn {
+  width: 691px;
+  color: #53402b;
+  background: url(../images/btnbg01.png) 0 0 no-repeat;
+}
+.btn .total {
+  font-size: 40px;
+  font-weight: 800;
+  color: #524843;
+  line-height: 91px;
+}
 
 .content {
   height: 1413px;
@@ -457,7 +462,7 @@ body .popup .popupOverlay {
           background-clip: text;
   color: transparent;
   margin-bottom: 60px;
-  line-height: 100%;
+  line-height: 110%;
 }
 .content .subTitle {
   text-align: center;
@@ -469,7 +474,25 @@ body .popup .popupOverlay {
           background-clip: text;
   color: transparent;
   margin-bottom: 50px;
-  line-height: 100%;
+  line-height: 110%;
+}
+.content .subTitle + .btn {
+  margin-bottom: 30px;
+}
+.content .subTitle + .btn + .detailBlock table.detail tbody {
+  height: 1040px;
+}
+.content .subTitle + .btn + .detailBlock table.detail th:first-child {
+  width: 120px;
+}
+.content .subTitle + .btn + .detailBlock table.detail th:last-child {
+  width: 120px;
+}
+.content .subTitle + .btn + .detailBlock table.detail tr td:first-child {
+  width: 100px;
+}
+.content .subTitle + .btn + .detailBlock table.detail tr td:last-child {
+  width: 100px;
 }
 
 .stepBlock {
@@ -488,7 +511,7 @@ body .popup .popupOverlay {
           align-items: center;
   max-width: 800px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 15px;
 }
 .stepBlock .stepArrow {
   -webkit-transform: rotate(90deg);
@@ -853,9 +876,130 @@ body .popup .popupOverlay {
   border-radius: 10px;
   background-color: #d6c9af;
 }
-.termsBlock + .btn {
-  max-width: 800px;
+
+.pwBlock {
+  max-width: 1200px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pwBlock .leftText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+.pwBlock .leftText .text {
+  font-size: 50px;
+  font-weight: 600;
+  color: #524843;
+  line-height: 180%;
+  margin-bottom: 70px;
+}
+.pwBlock .leftText .password {
+  position: relative;
+  margin-bottom: 70px;
+}
+.pwBlock .leftText .password input {
+  width: 680px;
+  font-size: 36px;
+  padding: 16px 80px 16px 32px;
+  border-radius: 12px;
+  border: 4px solid #524843;
+  color: #524843;
+  letter-spacing: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.pwBlock .leftText .password button.passwordEye {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  border: none;
+  color: transparent;
+  width: 50px !important;
+  height: 50px;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent;
+}
+.pwBlock .leftText .password button.passwordEye:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: block;
+  opacity: 0.8;
+}
+.pwBlock .leftText .password button.passwordEye.show:before {
+  background: url(../images/icon_eyeOpen.svg) center no-repeat;
+}
+.pwBlock .leftText .password button.passwordEye.hide:before {
+  background: url(../images/icon_eyeClose.svg) center no-repeat;
+}
+.pwBlock .leftText .btn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.pwBlock .rightKey {
+  border: 5px solid #524843;
+  border-radius: 18px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.pwBlock .rightKey .keyBoard {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+  gap: 14px;
+}
+.pwBlock .rightKey .keyBoard .key {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 60px;
+  background: #e9eaea;
+  color: #524843;
+  border: 3px solid #524843;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.pwBlock .rightKey .keyBoard .key:last-child {
+  grid-column: span 2;
+}
+.pwBlock .rightKey .keyBoard .key:active {
+  background: #fdcd00;
 }
 
 .caseBlock {
@@ -1050,7 +1194,17 @@ body .popup .popupOverlay {
      -moz-column-gap: 30px;
           column-gap: 30px;
   row-gap: 40px;
-  padding-top: 200px;
+  padding: 200px 0;
+  padding-bottom: 200px;
+}
+.nodeBlock.center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nodeBlock a.node {
   display: -webkit-box;
@@ -1162,4 +1316,22 @@ body .popup .popupOverlay {
   color: #53402b;
   border-bottom: 3px solid #e5dbc8;
   padding: 0.5em;
+}
+.detailBlock table.detail .deleteCard {
+  width: 60px;
+  height: 60px;
+  display: block;
+  background: url(../images/icon_delete.svg) 0 0 no-repeat;
+  font-size: 0;
+  margin: 0 auto;
+}
+.detailBlock table.detail .newCard {
+  color: #fff;
+  background: #fda300;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 8px;
+  line-height: normal;
+  font-size: 24px;
 }/*# sourceMappingURL=style.css.map */

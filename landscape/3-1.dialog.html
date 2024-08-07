@@ -6,7 +6,7 @@
     <title>2-7.管理者_櫃門全開</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="decoStart decoEnd">
+  <body>
     <!-- popup start -->
     <div class="popup">
       <div class="popupOverlay"></div>
@@ -23,5 +23,20 @@
       </div>
     </div>
     <!-- popup end -->
+    <script>
+      const overlay = document.querySelector(".popupOverlay");
+      const popup = document.querySelector(".popup");
+      const close = document.querySelector(".popup .close");
+
+      // 點擊 overlay 時隱藏 popup
+      overlay.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+
+      // 點擊 close 按鈕時隱藏 popup
+      close.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+    </script>
   </body>
 </html>
