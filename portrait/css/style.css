@@ -1026,7 +1026,7 @@ body .popup .popupOverlay {
           justify-content: center;
   width: 100%;
   gap: 55px;
-  bottom: -70px;
+  bottom: -80px;
 }
 .caseBlock .bottomCase .legend div {
   font-size: 33px;
@@ -1062,7 +1062,7 @@ body .popup .popupOverlay {
   width: 695px;
   height: 451px;
   background: url(../images/case_bgTop.png) 0 0;
-  margin-bottom: 7px;
+  margin-bottom: 30px;
 }
 .caseBlock .bottomCase .case2 {
   position: relative;
