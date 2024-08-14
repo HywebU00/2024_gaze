@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>閱讀器充電櫃管理平台</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loginWrap">
+      <div class="login">
+        <div class="logo">
+          <img src="images/logo.svg" alt="新竹縣政府文化局" />
+        </div>
+        <div class="loginBlock">
+          <div class="subTitle1">重設你的密碼</div>
+          <div class="subTitle2">請輸入六位數密碼。</div>
+          <form action="">
+            <div class="form">
+              <div class="formGrp">
+                <div class="password">
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="輸入新密碼"
+                    title="輸入新密碼"
+                  />
+                  <button type="button" class="passwordEye hide">
+                    顯示密碼
+                  </button>
+                </div>
+                <div class="notice error">請輸入六位數密碼</div>
+              </div>
+              <div class="formGrp">
+                <div class="password">
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="再次輸入新密碼"
+                    title="再次輸入新密碼"
+                  />
+                  <button type="button" class="passwordEye hide">
+                    顯示密碼
+                  </button>
+                </div>
+                <div class="notice error">您輸入的密碼不一致</div>
+              </div>
+              <div class="btnGrp">
+                <button type="button" class="btn">清除</button>
+                <button
+                  type="button"
+                  class="btn submit"
+                  onclick="window.location.href='01-3.forget_pw3.html'"
+                >
+                  重設密碼
+                </button>
+              </div>
+              <div class="forgerPW"><a href="01.login.html">返回登入頁</a></div>
+            </div>
+          </form>
+        </div>
+        <div class="copyright">
+          新竹縣政府文化局 © 2024 All Rights Reserved.
+        </div>
+      </div>
+    </div>
+
+    <script src="js/gaze.js"></script>
+  </body>
+</html>

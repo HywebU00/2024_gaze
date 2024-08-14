@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>閱讀器充電櫃管理平台</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="h1Title">
+            <a href="cms.html">
+              <div class="logo"><img src="images/logo.svg" alt="" /></div>
+              <div class="dep">
+                新竹縣政府文化局<span>閱讀器充電櫃管理平台</span>
+              </div>
+            </a>
+          </h1>
+          <div class="navInfo">
+            <div class="member">林O倫</div>
+            <button
+              class="logOut"
+              onclick="window.location.href='01.login.html'"
+            >
+              登出
+            </button>
+          </div>
+          <nav class="mainMenu">
+            <div class="mobileMenu"></div>
+            <div class="menu">
+              <ul>
+                <li><a href="02.status.html">櫃位狀態</a></li>
+                <li><a href="03.return.html">設備歸還</a></li>
+                <li><a href="04.statistics.html">統計報表</a></li>
+                <li><a href="05.manage.html" class="active">充電櫃管理</a></li>
+                <li><a href="06.terms.html">同意條款維護</a></li>
+                <li><a href="07.card_reader.html">卡片維護</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="main">
+        <div class="container">
+          <!-- content 白色區塊 -->
+          <div class="content">
+            <!-- breadcrumb路徑 -->
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">充電櫃管理</a></li>
+              </ul>
+            </nav>
+            <h2 class="pageTitle"><span>充電櫃管理</span></h2>
+            <!-- 充電櫃管理 -->
+            <div class="manageBlock bgBlock">
+              <!-- function start -->
+              <div class="function">
+                <div class="tableTitle">充電櫃列表</div>
+                <a href="05-1.manage_add.html" class="btn addCase"
+                  >新增充電櫃</a
+                >
+              </div>
+              <!-- function end -->
+              <!-- 表格縮小時可以有箭頭捲動要加上tableWrapper -->
+              <!-- tableWrapper start -->
+              <div class="tableWrapper">
+                <table class="hTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">序號</th>
+                      <th scope="col">充電櫃編號</th>
+                      <th scope="col">產品型號</th>
+                      <th scope="col">名稱</th>
+                      <th scope="col">充電格數量</th>
+                      <th scope="col">維護</th>
+                      <th scope="col">刪除</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="center">1</td>
+                      <td>ABC0001</td>
+                      <td>hy0001</td>
+                      <td>直立式A櫃</td>
+                      <td class="center">48</td>
+                      <td>
+                        <a href="05-2.manage_maintain.html" class="edit"
+                          >維護</a
+                        >
+                      </td>
+                      <td><a href="" class="delete">刪除</a></td>
+                    </tr>
+                    <tr>
+                      <td class="center">2</td>
+                      <td>ABC0001ABC0001ABC0001ABC0001</td>
+                      <td>hy0001hy0001hy0001hy0001</td>
+                      <td>直立式A櫃直立式A櫃直立式A櫃直立式A櫃</td>
+                      <td class="center">48</td>
+                      <td>
+                        <a href="05-2.manage_maintain.html" class="edit"
+                          >維護</a
+                        >
+                      </td>
+                      <td><a href="" class="delete">刪除</a></td>
+                    </tr>
+                    <tr>
+                      <td class="center">3</td>
+                      <td>ABC0001</td>
+                      <td>hy0001</td>
+                      <td>直立式A櫃</td>
+                      <td class="center">8</td>
+                      <td>
+                        <a href="05-2.manage_maintain.html" class="edit"
+                          >維護</a
+                        >
+                      </td>
+                      <td><a href="" class="delete">刪除</a></td>
+                    </tr>
+                    <tr>
+                      <td class="center">4</td>
+                      <td>ABC0001</td>
+                      <td>hy0001</td>
+                      <td>直立式A櫃</td>
+                      <td class="center">8+12</td>
+                      <td>
+                        <a href="05-2.manage_maintain.html" class="edit"
+                          >維護</a
+                        >
+                      </td>
+                      <td><a href="" class="delete">刪除</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- tableWrapper end -->
+            </div>
+            <!-- pagination start -->
+            <div class="pagination">
+              <div class="info">4筆資料，1/1頁</div>
+              <div class="page">
+                <!-- 沒有上下頁加none -->
+                <button href="" class="prev">上一頁</button>
+                <button href="" class="next" disabled>下一頁</button>
+              </div>
+            </div>
+            <!-- pagination end -->
+          </div>
+        </div>
+      </main>
+      <!-- copyright -->
+      <div class="copyright">新竹縣政府文化局 © 2024 All Rights Reserved.</div>
+    </div>
+
+    <script src="js/gaze.js"></script>
+  </body>
+</html>

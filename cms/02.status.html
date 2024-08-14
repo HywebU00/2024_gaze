@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>閱讀器充電櫃管理平台</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="h1Title">
+            <a href="cms.html">
+              <div class="logo"><img src="images/logo.svg" alt="" /></div>
+              <div class="dep">
+                新竹縣政府文化局<span>閱讀器充電櫃管理平台</span>
+              </div>
+            </a>
+          </h1>
+          <div class="navInfo">
+            <div class="member">林O倫</div>
+            <button
+              class="logOut"
+              onclick="window.location.href='01.login.html'"
+            >
+              登出
+            </button>
+          </div>
+          <nav class="mainMenu">
+            <div class="mobileMenu"></div>
+            <div class="menu">
+              <ul>
+                <li><a href="02.status.html" class="active">櫃位狀態</a></li>
+                <li><a href="03.return.html">設備歸還</a></li>
+                <li><a href="04.statistics.html">統計報表</a></li>
+                <li><a href="05.manage.html">充電櫃管理</a></li>
+                <li><a href="06.terms.html">同意條款維護</a></li>
+                <li><a href="07.card_reader.html">卡片維護</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="main">
+        <div class="container">
+          <!-- content 白色區塊 -->
+          <div class="content">
+            <!-- breadcrumb路徑 -->
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">充電櫃管理</a></li>
+              </ul>
+            </nav>
+            <h2 class="pageTitle"><span>櫃位狀態</span></h2>
+            <!-- 櫃位狀態 -->
+            <div class="caseBlock">
+              <div class="caseTab">
+                <!-- 頁籤 -->
+                <div class="tabs">
+                  <div class="tab">直立式48格</div>
+                  <div class="tab">桌上型8格</div>
+                  <div class="tab">桌上型8+12格</div>
+                </div>
+                <!-- 頁籤內容 -->
+                <div class="tabContent">
+                  <div class="caseInfo">
+                    <div class="caseName">直立式48格</div>
+                    <div class="caseCount">本日已借出<em>19</em>台次</div>
+                  </div>
+                  <div class="caseContent">
+                    <!-- 48格 -->
+                    <div class="case48">
+                      <div class="caseGroup group1">
+                        <div class="case available">01</div>
+                        <div class="case available">02</div>
+                        <div class="case available">03</div>
+                        <div class="case available">04</div>
+                        <div class="case available">05</div>
+                        <div class="case available">06</div>
+                        <div class="case empty">07</div>
+                        <div class="case available">08</div>
+                        <div class="case empty">09</div>
+                        <div class="case available">10</div>
+                        <div class="case available">11</div>
+                        <div class="case available">12</div>
+                      </div>
+                      <div class="caseGroup group2">
+                        <div class="case available">13</div>
+                        <div class="case available">14</div>
+                        <div class="case empty">15</div>
+                        <div class="case empty">16</div>
+                        <div class="case empty">17</div>
+                        <div class="case empty">18</div>
+                        <div class="case empty">19</div>
+                        <div class="case available">20</div>
+                        <div class="case available">21</div>
+                        <div class="case available">22</div>
+                        <div class="case available">23</div>
+                        <div class="case available">24</div>
+                      </div>
+                      <div class="caseGroup group3">
+                        <div class="case empty">25</div>
+                        <div class="case available">26</div>
+                        <div class="case empty">27</div>
+                        <div class="case available">28</div>
+                        <div class="case available">29</div>
+                        <div class="case available">30</div>
+                        <div class="case available">31</div>
+                        <div class="case available">32</div>
+                        <div class="case available">33</div>
+                        <div class="case available">34</div>
+                        <div class="case available">35</div>
+                        <div class="case available">36</div>
+                      </div>
+                      <div class="caseGroup group4">
+                        <div class="case available">37</div>
+                        <div class="case empty">38</div>
+                        <div class="case available">39</div>
+                        <div class="case available">40</div>
+                        <div class="case available">41</div>
+                        <div class="case available">42</div>
+                        <div class="case disable">43</div>
+                        <div class="case disable">44</div>
+                        <div class="case disable">45</div>
+                        <div class="case disable">46</div>
+                        <div class="case disable">47</div>
+                        <div class="case disable">48</div>
+                      </div>
+                      <div class="caseBg">
+                        <img src="images/case48.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabContent">
+                  <div class="caseInfo">
+                    <div class="caseName">桌上型8格</div>
+                    <div class="caseCount">本日已借出<em>19</em>台次</div>
+                  </div>
+                  <div class="caseContent">
+                    <div class="case8">
+                      <div class="caseGroup">
+                        <div class="case available">01</div>
+                        <div class="case available">02</div>
+                        <div class="case available">03</div>
+                        <div class="case available">04</div>
+                        <div class="case available">05</div>
+                        <div class="case available">06</div>
+                        <div class="case empty">07</div>
+                        <div class="case available">08</div>
+                      </div>
+                      <div class="caseBg">
+                        <img src="images/case8.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabContent">
+                  <div class="caseInfo">
+                    <div class="caseName">桌上型8+12格</div>
+                    <div class="caseCount">本日已借出<em>19</em>台次</div>
+                  </div>
+                  <div class="caseContent">
+                    <div class="case8">
+                      <div class="caseGroup">
+                        <div class="case available">01</div>
+                        <div class="case available">02</div>
+                        <div class="case available">03</div>
+                        <div class="case available">04</div>
+                        <div class="case available">05</div>
+                        <div class="case available">06</div>
+                        <div class="case empty">07</div>
+                        <div class="case available">08</div>
+                      </div>
+                      <div class="caseBg">
+                        <img src="images/case8.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="case12">
+                      <div class="caseGroup">
+                        <div class="case empty">09</div>
+                        <div class="case available">10</div>
+                        <div class="case available">11</div>
+                        <div class="case available">12</div>
+                        <div class="case empty">13</div>
+                        <div class="case empty">14</div>
+                        <div class="case available">15</div>
+                        <div class="case available">16</div>
+                        <div class="case available">17</div>
+                        <div class="case available">18</div>
+                        <div class="case empty">19</div>
+                        <div class="case empty">20</div>
+                      </div>
+                      <div class="caseBg">
+                        <img src="images/case12.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="caseLegend">
+                <div class="legend empty">空櫃</div>
+                <div class="legend available">可使用</div>
+                <div class="legend disable">停用</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- copyright -->
+      <div class="copyright">新竹縣政府文化局 © 2024 All Rights Reserved.</div>
+    </div>
+
+    <script src="js/gaze.js"></script>
+  </body>
+</html>

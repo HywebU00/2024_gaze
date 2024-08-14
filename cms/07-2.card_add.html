@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>閱讀器充電櫃管理平台</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="h1Title">
+            <a href="cms.html">
+              <div class="logo"><img src="images/logo.svg" alt="" /></div>
+              <div class="dep">
+                新竹縣政府文化局<span>閱讀器充電櫃管理平台</span>
+              </div>
+            </a>
+          </h1>
+          <div class="navInfo">
+            <div class="member">林O倫</div>
+            <button
+              class="logOut"
+              onclick="window.location.href='01.login.html'"
+            >
+              登出
+            </button>
+          </div>
+          <nav class="mainMenu">
+            <div class="mobileMenu"></div>
+            <div class="menu">
+              <ul>
+                <li><a href="02.status.html">櫃位狀態</a></li>
+                <li><a href="03.return.html">設備歸還</a></li>
+                <li><a href="04.statistics.html">統計報表</a></li>
+                <li><a href="05.manage.html" class="active">充電櫃管理</a></li>
+                <li><a href="06.terms.html">同意條款維護</a></li>
+                <li><a href="07.card_reader.html">卡片維護</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="main">
+        <div class="container">
+          <!-- content 白色區塊 -->
+          <div class="content">
+            <!-- breadcrumb路徑 -->
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">卡片維護</a></li>
+                <li><a href="#">新增卡片</a></li>
+              </ul>
+            </nav>
+            <h2 class="pageTitle"><span>新增卡片</span></h2>
+            <!-- 新增充電櫃 -->
+            <div class="addCardBlock bgBlock">
+              <!-- gazeInfo start -->
+              <div class="cardInfo">
+                <form action="">
+                  <table class="vTable">
+                    <tr>
+                      <th>卡片類型</th>
+                      <td>讀者卡／館員卡</td>
+                    </tr>
+                    <tr>
+                      <th>卡號</th>
+                      <td>0129401924</td>
+                    </tr>
+                    <tr>
+                      <th>備註</th>
+                      <td>
+                        <input type="text" name="" value="" />
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="btnGrp">
+                    <button type="button" class="btn">取消</button>
+                    <button type="button" class="btn submit">送出</button>
+                  </div>
+                </form>
+              </div>
+              <!-- gazeInfo end -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- copyright -->
+      <div class="copyright">新竹縣政府文化局 © 2024 All Rights Reserved.</div>
+    </div>
+
+    <script src="js/gaze.js"></script>
+  </body>
+</html>

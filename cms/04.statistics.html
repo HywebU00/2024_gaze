@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta name="robots" content="noindex" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>閱讀器充電櫃管理平台</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="h1Title">
+            <a href="cms.html">
+              <div class="logo"><img src="images/logo.svg" alt="" /></div>
+              <div class="dep">
+                新竹縣政府文化局<span>閱讀器充電櫃管理平台</span>
+              </div>
+            </a>
+          </h1>
+          <div class="navInfo">
+            <div class="member">林O倫</div>
+            <button
+              class="logOut"
+              onclick="window.location.href='01.login.html'"
+            >
+              登出
+            </button>
+          </div>
+          <nav class="mainMenu">
+            <div class="mobileMenu"></div>
+            <div class="menu">
+              <ul>
+                <li><a href="02.status.html">櫃位狀態</a></li>
+                <li><a href="03.return.html">設備歸還</a></li>
+                <li>
+                  <a href="04.statistics.html" class="active">統計報表</a>
+                </li>
+                <li><a href="05.manage.html">充電櫃管理</a></li>
+                <li><a href="06.terms.html">同意條款維護</a></li>
+                <li><a href="07.card_reader.html">卡片維護</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="main">
+        <div class="container">
+          <!-- content 白色區塊 -->
+          <div class="content">
+            <!-- breadcrumb路徑 -->
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">統計報表</a></li>
+              </ul>
+            </nav>
+            <h2 class="pageTitle"><span>統計報表</span></h2>
+            <!-- 統計報表 -->
+            <!-- 設備借用日統計 -->
+            <div class="chartDayBlock bgBlock">
+              <!-- function start -->
+              <div class="function">
+                <div class="tableTitle">設備借用日統計</div>
+                <div class="filter">
+                  <div class="page">
+                    <!-- 沒有上下頁加none -->
+                    <button class="prev">上一天</button>
+                    <div class="now">2022/01/01</div>
+                    <button class="next" disabled>下一天</button>
+                  </div>
+                  <div class="dateInput"><input type="date" /></div>
+                </div>
+              </div>
+              <!-- function end -->
+              <!-- tableWrapper start -->
+              <div class="tableWrapper">
+                <table class="hTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">序號</th>
+                      <th scope="col">充電櫃編號</th>
+                      <th scope="col">設備代碼</th>
+                      <th scope="col">借閱人</th>
+                      <th scope="col">借閱時間</th>
+                      <th scope="col">歸還時間</th>
+                      <th scope="col" class="sort">
+                        狀態
+                        <button class="arrowUp active">升冪</button>
+                        <button class="arrowDown">降冪</button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="center">1</td>
+                      <td>直立式A櫃-09</td>
+                      <td>AD1234567</td>
+                      <td>黃Ｏ玫</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td></td>
+                      <td class="center"><span class="borrow">借閱中</span></td>
+                    </tr>
+                    <tr>
+                      <td class="center">2</td>
+                      <td>直立式A櫃-09</td>
+                      <td>AD1234567</td>
+                      <td>黃Ｏ玫</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td></td>
+                      <td class="center"><span class="borrow">借閱中</span></td>
+                    </tr>
+                    <tr>
+                      <td class="center">3</td>
+                      <td>直立式A櫃-09</td>
+                      <td>AD1234567</td>
+                      <td>黃Ｏ玫</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td class="center">已歸還</td>
+                    </tr>
+                    <tr>
+                      <td class="center">4</td>
+                      <td>直立式A櫃-09</td>
+                      <td>AD1234567</td>
+                      <td>黃Ｏ玫</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td>2024/07/01<br />09:10:05</td>
+                      <td class="center">已歸還</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- tableWrapper end -->
+            </div>
+            <!-- 設備借用週統計 -->
+            <div class="chartWeekBlock bgBlock">
+              <!-- function start -->
+              <div class="function">
+                <div class="tableTitle">設備借用週統計</div>
+                <div class="filter">
+                  <div class="page">
+                    <!-- 沒有上下頁加none -->
+                    <button class="prev">上一週</button>
+                    <div class="now">2022/01/01~2022/01/07</div>
+                    <button class="next" disabled>下一週</button>
+                  </div>
+                  <div class="dateInput">
+                    <input type="date" />~<input type="date" />
+                  </div>
+                </div>
+              </div>
+              <!-- function end -->
+              <div class="chartWeek">
+                <canvas id="chartWeek"></canvas>
+              </div>
+            </div>
+            <!-- 使用者分析 -->
+            <div class="chartUserBlock bgBlock">
+              <!-- function start -->
+              <div class="function">
+                <div class="tableTitle">使用者分析</div>
+                <div class="filter">
+                  <div class="radioGrp formInline">
+                    <label>
+                      <input
+                        type="radio"
+                        name="sampleRadio6"
+                        value=""
+                        title="本週"
+                        checked=""
+                      />本週</label
+                    >
+                    <label>
+                      <input
+                        type="radio"
+                        name="sampleRadio6"
+                        value=""
+                        title="本月"
+                      />本月</label
+                    >
+                    <label>
+                      <input
+                        type="radio"
+                        name="sampleRadio6"
+                        value=""
+                        title="本年"
+                      />本年</label
+                    >
+                    <label>
+                      <input
+                        type="radio"
+                        name="sampleRadio6"
+                        value=""
+                        title="自訂"
+                      />自訂
+                      <div class="dateInput">
+                        <input type="date" />~<input type="date" />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- function end -->
+              <div class="chartUser">
+                <div class="chartTitle">借閱性別比例</div>
+                <div class="leftChart">
+                  <canvas id="chartUser1"></canvas>
+                </div>
+                <div class="rightText">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>性別</th>
+                        <th>借閱人數</th>
+                        <th>占比</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>男性</td>
+                        <td>50</td>
+                        <td>33%</td>
+                      </tr>
+                      <tr>
+                        <td>女性</td>
+                        <td>100</td>
+                        <td>66%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="chartUser">
+                <div class="chartTitle">借閱年齡分佈</div>
+                <canvas id="chartUser2"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- copyright -->
+      <div class="copyright">新竹縣政府文化局 © 2024 All Rights Reserved.</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://emn178.github.io/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/gaze.js"></script>
+  </body>
+</html>
