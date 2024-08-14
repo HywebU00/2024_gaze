@@ -352,6 +352,12 @@ input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+input[type=radio]:focus,
+input[type=checkbox]:focus {
+  border: 2px solid #534741;
 }
 
 input[type=checkbox]:checked {
@@ -741,6 +747,7 @@ input[type=radio]:checked::before {
     position: absolute;
     right: 10px;
     top: 6px;
+    z-index: 9;
   }
 }
 .header .navInfo .member {
@@ -820,6 +827,10 @@ input[type=radio]:checked::before {
   background-size: 44px;
   left: 10px;
   top: 6px;
+}
+.header .mainMenu .mobileMenu:hover {
+  background: #ba6000 url(../images/icon_hamburger.svg) center no-repeat;
+  background-size: 44px;
 }
 @media (max-width: 768px) {
   .header .mainMenu .mobileMenu {
@@ -983,6 +994,77 @@ body {
 }
 body a:focus {
   outline: 0;
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  z-index: 999;
+}
+.popup .popupBlock {
+  width: 50%;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 26px 30px rgba(0, 0, 0, 0.28);
+          box-shadow: 0 26px 30px rgba(0, 0, 0, 0.28);
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px 50px 50px 50px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 768px) {
+  .popup .popupBlock {
+    width: 80%;
+  }
+}
+.popup .popupBlock .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background: url(../images/icon_delete.svg) center center no-repeat;
+  font-size: 0;
+  background-size: 36px;
+}
+.popup .popupBlock .close:hover, .popup .popupBlock .close:focus-visible {
+  background: url(../images/icon_delete_.svg) center center no-repeat;
+  background-size: 36px;
+}
+.popup .popupBlock .popupContent .text {
+  color: #534741;
+}
+.popup .popupBlock .btnGrp {
+  margin-bottom: 0;
+}
+.popup .popupOverlay {
+  background: rgba(0, 0, 0, 0.47);
+  position: absolute;
+  inset: 0;
 }
 
 .wrap {
@@ -1388,9 +1470,11 @@ table.hTable td .borrow {
   color: #582f2f;
   font-weight: bold;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .function .tableTitle {
+    width: 100%;
     margin-bottom: 8px;
+    text-align: center;
   }
 }
 .function .addCase {
@@ -1491,8 +1575,36 @@ table.hTable td .borrow {
       flex-wrap: wrap;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  .function .filter .dateInput {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .function .filter label .dateInput {
   margin-left: 8px;
+}
+.function .filter .radioGrp {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .function .filter .radioGrp {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.function .filter .radioGrp label {
+  margin-bottom: 8px;
+}
+@media (max-width: 576px) {
+  .function .filter .radioGrp .dateInput {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 .role {
@@ -1514,6 +1626,12 @@ table.hTable td .borrow {
   padding-left: 48px;
   padding-right: 48px;
   margin: 0;
+}
+@media (max-width: 576px) {
+  .role a {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .role a.active {
   background: #582f2f;
@@ -1550,6 +1668,11 @@ table.hTable td .borrow {
   gap: 8px;
   margin-bottom: 40px;
 }
+@media (max-width: 576px) {
+  .caseBlock .caseTab .tabs {
+    margin-bottom: 20px;
+  }
+}
 .caseBlock .caseTab .tabs .tab {
   cursor: pointer;
   padding: 10px 30px;
@@ -1560,6 +1683,10 @@ table.hTable td .borrow {
 }
 .caseBlock .caseTab .tabs .tab.active {
   background: #582f2f;
+}
+.caseBlock .caseTab .tabs .tab:hover, .caseBlock .caseTab .tabs .tab:focus-visible {
+  background: #ba6000;
+  outline: 0;
 }
 .caseBlock .caseTab .tabContent {
   display: none;
@@ -1650,6 +1777,8 @@ table.hTable td .borrow {
 @media (max-width: 576px) {
   .caseBlock .caseInfo .caseName {
     font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
   }
 }
 .caseBlock .caseInfo .caseCount {
@@ -1658,6 +1787,8 @@ table.hTable td .borrow {
 @media (max-width: 576px) {
   .caseBlock .caseInfo .caseCount {
     font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
   }
 }
 .caseBlock .caseInfo .caseCount em {
@@ -1952,6 +2083,12 @@ table.hTable td .borrow {
 .chartWeek {
   background: #fff;
   border-radius: 6px;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .chartWeek {
+    padding: 10px;
+  }
 }
 
 .chartUser {
@@ -1967,6 +2104,11 @@ table.hTable td .borrow {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .chartUser {
+    padding: 10px;
+  }
+}
 .chartUser .chartTitle {
   width: 100%;
   margin-bottom: 16px;
@@ -1976,8 +2118,18 @@ table.hTable td .borrow {
 .chartUser .leftChart {
   width: 50%;
 }
+@media (max-width: 768px) {
+  .chartUser .leftChart {
+    display: none;
+  }
+}
 .chartUser .rightText {
   width: 50%;
+}
+@media (max-width: 768px) {
+  .chartUser .rightText {
+    width: 100%;
+  }
 }
 .chartUser .rightText table {
   width: 100%;

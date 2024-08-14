@@ -1,6 +1,5 @@
 @import "_normalize"; //reset
 @import "_variable"; //variable
-//@import "_notice"; //notice
 @import "_form"; //form
 @import "_login"; //login
 @import "_header"; //header
@@ -15,6 +14,62 @@ body {
   }
   a:focus {
     outline: 0;
+  }
+}
+.popup {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  z-index: 999;
+  .popupBlock {
+    width: 50%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 26px 30px rgba($color: #000000, $alpha: 0.28);
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px 50px 50px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: $screenSm) {
+      width: 80%;
+    }
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      background: url(../images/icon_delete.svg) center center no-repeat;
+      font-size: 0;
+      background-size: 36px;
+      &:hover,
+      &:focus-visible {
+        background: url(../images/icon_delete_.svg) center center no-repeat;
+        background-size: 36px;
+      }
+    }
+    .popupContent {
+      .text {
+        color: $textColor;
+      }
+    }
+    .btnGrp {
+      margin-bottom: 0;
+    }
+  }
+  .popupOverlay {
+    background: rgba($color: #000000, $alpha: 0.47);
+    position: absolute;
+    inset: 0;
   }
 }
 .wrap {
@@ -374,8 +429,10 @@ table {
     font-size: 1.5rem;
     color: $primaryColor;
     font-weight: bold;
-    @media (max-width: $screenXs) {
+    @media (max-width: $screenSm) {
+      width: 100%;
       margin-bottom: 8px;
+      text-align: center;
     }
   }
   .addCase {
@@ -450,9 +507,26 @@ table {
       align-items: center;
       flex-wrap: wrap;
       gap: 8px;
+      @media (max-width: $screenSm) {
+        justify-content: center;
+      }
     }
     label .dateInput {
       margin-left: 8px;
+    }
+    .radioGrp {
+      flex-wrap: wrap;
+      @media (max-width: $screenSm) {
+        justify-content: center;
+      }
+      label {
+        margin-bottom: 8px;
+      }
+      .dateInput {
+        @media (max-width: $screenXs) {
+          justify-content: left;
+        }
+      }
     }
   }
 }
@@ -468,6 +542,10 @@ table {
     padding-left: 48px;
     padding-right: 48px;
     margin: 0;
+    @media (max-width: $screenXs) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
     &.active {
       background: $btnBg1;
       border: 2px solid $btnBg1;
@@ -495,6 +573,9 @@ table {
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 40px;
+      @media (max-width: $screenXs) {
+        margin-bottom: 20px;
+      }
       .tab {
         cursor: pointer;
         padding: 10px 30px;
@@ -504,6 +585,11 @@ table {
         font-weight: bold;
         &.active {
           background: $tabColor2;
+        }
+        &:hover,
+        &:focus-visible {
+          background: $tabColor3;
+          outline: 0;
         }
       }
     }
@@ -575,12 +661,16 @@ table {
       font-size: 1.75rem;
       @media (max-width: $screenXs) {
         font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
       }
     }
     .caseCount {
       font-size: 1.5rem;
       @media (max-width: $screenXs) {
         font-size: 1.25rem;
+        width: 100%;
+        text-align: center;
       }
       em {
         font-size: 2.25rem;
@@ -809,6 +899,10 @@ table {
 .chartWeek {
   background: #fff;
   border-radius: 6px;
+  padding: 40px;
+  @media (max-width: $screenSm) {
+    padding: 10px;
+  }
 }
 .chartUser {
   background: #fff;
@@ -818,6 +912,9 @@ table {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: $screenSm) {
+    padding: 10px;
+  }
   .chartTitle {
     width: 100%;
     margin-bottom: 16px;
@@ -826,9 +923,15 @@ table {
   }
   .leftChart {
     width: 50%;
+    @media (max-width: $screenSm) {
+      display: none;
+    }
   }
   .rightText {
     width: 50%;
+    @media (max-width: $screenSm) {
+      width: 100%;
+    }
     table {
       width: 100%;
       thead {

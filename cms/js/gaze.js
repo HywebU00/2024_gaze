@@ -271,3 +271,18 @@ formEye({
     },
   },
 });
+
+
+const overlay = document.querySelector(".popupOverlay");
+const popup = document.querySelector(".popup");
+const close = document.querySelector(".popup .close");
+
+// 點擊 overlay 時隱藏 popup
+overlay.addEventListener("click", function () {
+  popup.style.display = "none";
+});
+
+// 點擊 close 按鈕時隱藏 popup
+close.addEventListener("click", function () {
+  popup.style.display = "none";
+});

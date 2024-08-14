@@ -76,12 +76,13 @@
       position: absolute;
       right: 10px;
       top: 6px;
+      z-index: 9;
     }
     .member {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: $logColor;
+      color: $logColor1;
       font-weight: bold;
       font-size: 1.25rem;
       @media (max-width: $screenSm) {
@@ -140,10 +141,15 @@
       width: 46px;
       height: 46px;
       border-radius: 10px;
-      background: $logColor url(../images/icon_hamburger.svg) center no-repeat;
+      background: $logColor1 url(../images/icon_hamburger.svg) center no-repeat;
       background-size: 44px;
       left: 10px;
       top: 6px;
+      &:hover {
+        background: $logColor2 url(../images/icon_hamburger.svg) center
+          no-repeat;
+        background-size: 44px;
+      }
       @media (max-width: $screenSm) {
         display: block;
       }

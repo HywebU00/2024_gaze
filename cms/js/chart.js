@@ -19,10 +19,10 @@ new Chart(document.getElementById("chartWeek"), {
   options: {
     layout: {
       padding: {
-        left: 40,
-        right: 40,
-        top: 40,
-        bottom: 40
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0
       }
     },
     elements: {
@@ -81,51 +81,6 @@ new Chart(document.getElementById("chartWeek"), {
   },
 });
 
-
-// new Chart(document.getElementById("chartUser1"), {
-//   type: "pie",
-//   data: {
-//     datasets: [
-//       {
-//         data: [39486, 12088],
-//         backgroundColor: [
-//           "#F765A3",
-//           "#A155B9",
-//         ],
-//         borderWidth: [0, 0, 0, 0, 0],
-//         hoverBackgroundColor: [
-//           "#F765A3",
-//           "#A155B9",
-//         ],
-//       },
-//     ],
-//     labels: [
-//       "偽冒公眾人物",
-//       "偽冒政府機構",
-//     ],
-//   },
-//   options: {
-//     animation: {
-//       animateRotate: true,
-//       animateScale: true,
-//     },
-//     legend: {
-//       display: true,
-//       position: "bottom",
-//       labels: {
-//         fontColor: "#534741",
-//         fontSize: 16,
-//         padding: 10,
-//       },
-//     },
-//     tooltips: {
-//       // enabled: true,
-//       displayColors: false,
-//     },
-//     responsive: true,
-
-//   },
-// });
 
 var ctx = document.getElementById('chartUser1').getContext('2d');
 
