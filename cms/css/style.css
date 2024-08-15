@@ -1817,9 +1817,11 @@ table.hTable td .borrow {
   }
 }
 .caseBlock .caseContent .case.empty {
+  color: #3e342f;
   background: #fdcd00;
 }
 .caseBlock .caseContent .case.available {
+  color: #3e342f;
   background: #8bddde;
 }
 .caseBlock .caseContent .case.disable {

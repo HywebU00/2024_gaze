@@ -694,9 +694,11 @@ table {
         font-size: 0.875rem;
       }
       &.empty {
+        color: #3e342f;
         background: #fdcd00;
       }
       &.available {
+        color: #3e342f;
         background: #8bddde;
       }
       &.disable {
