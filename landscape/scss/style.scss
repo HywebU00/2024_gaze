@@ -273,6 +273,89 @@ body {
     }
   }
 }
+// 款式選擇
+.selectBlock {
+  // display: flex;
+  // column-gap: 48px;
+  // justify-content: center;
+  margin-top: -30px;
+  padding: 0 100px;
+  .slick-prev,
+  .slick-next {
+    width: 50px;
+    height: 100px;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    z-index: 99;
+  }
+  .slick-prev {
+    left: 50px;
+    background: transparent url(../images/arrow.svg) center center no-repeat;
+  }
+  .slick-next {
+    right: 50px;
+    background: transparent url(../images/arrow2.svg) center center no-repeat;
+  }
+  .slick-disabled {
+    display: none !important;
+  }
+  .gaze {
+    padding: 30px 0;
+    .pic {
+      position: relative;
+      width: 355px;
+      height: 355px;
+      border: 10px solid #fff;
+      border-radius: 80px;
+      background: $boxBgColor;
+      box-shadow: 0 0 30px rgba(57, 20, 20, 0.15);
+      overflow: hidden;
+      margin-bottom: 24px;
+      margin-left: auto;
+      margin-right: auto;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        img {
+          height: 260px;
+        }
+        .text {
+          position: absolute;
+          background: #47352e;
+          color: #fff;
+          font-weight: bold;
+          font-size: 35px;
+          padding: 16px 48px;
+          border-radius: 60px;
+          display: none;
+        }
+      }
+    }
+    .info {
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      color: $textColor;
+    }
+    &.empty {
+      .pic {
+        img {
+          opacity: 0.6;
+          filter: grayscale(100%);
+        }
+        .text {
+          display: block;
+        }
+      }
+    }
+  }
+}
 // 掃描
 .scanBlock {
   position: relative;
