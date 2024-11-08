@@ -324,9 +324,10 @@ body {
   }
   .slide {
     display: flex !important;
-    column-gap: 64px;
     row-gap: 100px;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 130px;
+    box-sizing: border-box;
     flex-wrap: wrap;
     align-items: center;
     .gaze {
