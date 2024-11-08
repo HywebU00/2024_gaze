@@ -643,7 +643,7 @@ body .popup .popupOverlay {
 .selectBlock .slide .gaze .pic {
   position: relative;
   width: 355px;
-  height: 355px;
+  height: 370px;
   border: 10px solid #fff;
   border-radius: 80px;
   background: #fffaf0;
@@ -664,6 +664,18 @@ body .popup .popupOverlay {
           align-items: center;
   height: 100%;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+}
+.selectBlock .slide .gaze .pic a .size {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #524843;
+  white-space: nowrap;
 }
 .selectBlock .slide .gaze .pic a img {
   height: 260px;

@@ -307,7 +307,7 @@ body {
     .pic {
       position: relative;
       width: 355px;
-      height: 355px;
+      height: 370px;
       border: 10px solid #fff;
       border-radius: 80px;
       background: $boxBgColor;
@@ -322,6 +322,15 @@ body {
         align-items: center;
         height: 100%;
         position: relative;
+        flex-direction: column;
+        text-decoration: none;
+        .size {
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: $textColor;
+          white-space: nowrap;
+        }
         img {
           height: 260px;
         }
